@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Pixel ScoreBox</title>
+      <link rel="icon" type="image/x-icon" href="assets/gr/favicon.ico">
+      <link rel="stylesheet" href="/static/assets/css/bp5.css" type="text/css">
+      <link rel="stylesheet" href="/static/assets/css/style.css" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   </head>
+   <body>
+      <div id="header">
+         <div id="mast">
+            <h1><a href="/">Pixel ScoreBox</a></h1>
+         </div>
+      </div>
+      <div id="main" class="three-columns-grid">
+         <div id="home" class="team
+         {% if game['atbat'] == game['home']['name'] %}
+             atbat
+         {% endif %}
+            ">
+            <h2 class="editable">{{ game['home']['name'] }}</h2>
+            <h3 class="score">{{ game['home']['score'] }}</h3>
+            <p><a href="/home/score/-1" class="minus">-</a> Score <a href="/home/score/1" class="plus">+</a></p>
+            <h3 class="outs">{{ game['home']['outs'] }}</h3>
+            <p><a href="/home/outs/-1" class="minus">-</a> Outs <a href="/home/outs/1" class="plus">+</a></p>
+         </div>
+         <div id="details">
+            <h2 class="inning">{{ game['inning'] }}</h2>
+            <p><a href="/none/inning/-1" class="minus">-</a> Inning <a href="/none/inning/1" class="plus">+</a></p>
+            <p><span class="atbat">{{ game['atbat'] }}</span><br><a href="/none/atbat/{{ game['atbat'] }}">Switch At Bat</a></p>
+            <p class="reset"><a href="/none/clear/0">Reset Game</a></p>
+         </div>
+         <div id="away" class="team
+         {% if game['atbat'] == game['away']['name'] %}
+             atbat
+         {% endif %}
+            ">
+            <h2 class="editable">{{ game['away']['name'] }}</h2>
+            <h3 class="score">{{ game['away']['score'] }}</h3>
+            <p><a href="/away/score/-1" class="minus">-</a> Score <a href="/away/score/1" class="plus">+</a></p>
+            <h3 class="outs">{{ game['away']['outs'] }}</h3>
+            <p><a href="/away/outs/-1" class="minus">-</a> Outs <a href="/away/outs/1" class="plus">+</a></p>
+         </div>
+      </div>
+
+      <!-- Include jQuery library -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="/static/assets/js/main.js"></script>
+   </body>
+</html>

@@ -1,0 +1,115 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-top: 20px;
+}
+
+h1 a{
+    text-decoration:none;
+    color:#333;
+}
+
+h1 a:hover{
+    text-decoration:underline;
+    color:blue;
+}
+
+h2 {
+    font-size: 18px;
+    font-style: italic;
+    color: #9a9a9a;
+    margin: 2px 0;
+}
+
+#header{
+    text-align:center;
+}
+
+#mast{
+    padding:10px;
+    background:url(../gr/mdxpslogo.png) left center no-repeat;
+    width:600px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+#main{
+    text-align:center;
+    margin:10px;
+}
+
+/* container */
+.three-columns-grid {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* columns */
+.three-columns-grid > * {
+    padding:1rem;
+}
+
+.editable{
+    position: relative;
+}
+
+#main h2{
+    font-size:25px;
+    margin:0;
+    padding:20px;
+    color:#999;
+    text-transform:capitalize;
+}
+
+#main h3{
+    font-size:90px;
+    letter-spacing:10px;
+    border:1px solid #000;
+    padding:20px;
+    margin:0;
+}
+
+#main p{
+    line-height:25px;
+}
+
+a.minus, a.plus{
+    text-decoration:none;
+    font-size:25px;
+    font-weight:bold;
+    color:#222;
+    padding-right:10px;
+    padding-left:10px;
+    border:1px solid #000;
+}
+a.minus:hover, a.plus:hover{
+    background:red;
+    color:#FFF;
+    border-color:red;
+}
+
+div.atbat{
+    border:1px solid red;
+}
+
+#details h2{
+    border:1px solid #000;
+    font-size:40px;
+    margin-right:auto;
+    margin-left:auto;
+    width:auto;
+    padding:20px;
+}
